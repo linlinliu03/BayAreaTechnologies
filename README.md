@@ -38,8 +38,32 @@ This project will be implemented with the following technologies:
 
 ## Implementation Timeline
 
-**Day 1:** Setup necessary node modules, get webpack up and running. Create webpack.config.js and package.json. Write a basic entry file and finish prep for D3. 
+**Day 1:** Get ready for the project.
 Goals for the day:
+- [ ] Finish design for the project structure 
 - [ ] Acquire csv files for company data
+- [ ] Begin learning D3 and understanding how to use it for the scope of the project
+
+**Day 2:** Setup necessary node modules, get webpack up and running. Create webpack.config.js and package.json. Write a basic entry file and finish prep for D3. 
+Goals for the day:
 - [ ] Get webpack serving files and frame out index.html
 - [ ] Understand d3 enough to actually be able to render some default graphs
+
+**Day 3:** Improve understanding of d3 and begin displaying company logos on the graph and be able to organize them according to some type of filter. Start working on logic for displaying different sets of data. 
+Goals for the day:
+- [ ] Display company logos in some type of order
+- [ ] Start writing logic for different filters
+
+**Day 4:** Finish or come close to finishing the logic for displaying groups of different data. Write out functions for collision and also handling different size data sets. 
+Goals for the day:
+- [ ] Finish logic for displaying different groups data
+- [ ] Write collision logic and dynamic functions that handle different amounts of data.
+
+**Day 5:** Work on styling and css to make everything look polished.
+Goals for the day:
+- [ ] style the page.
+- [ ] Implement buttons for filters on sidebar.
+- [ ] Make sure everything looks nice.
+
+
+
