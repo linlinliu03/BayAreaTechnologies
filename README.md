@@ -13,4 +13,16 @@ Users will be able to check various selectors to modify the data and be able to 
 With BayAreaTechnologies, users will be able to:
 
 * View data on technology statistics as they relate to top tech companies in the Bay Area.
+* View individual data on a particular tech company including company name, type, location, technologies used, and introduction.
+* Check selectors that filter by location or company type specifying what data should be shown.
+
+In addition, the project will include:
+
+* A production README.
+
+## Wireframes
+
+The app will consist of a main section showing the data visualization with company logos, sidebar selectors to filter data, links to my Github and Linkedin.
+
+Possible filters will include which location or company type to display. In the main section, users can mouse over a company logo to display additional information such as company name, type, location, technologies used, and introduction.
 
