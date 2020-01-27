@@ -65,5 +65,12 @@ Goals for the day:
 - [ ] Implement buttons for filters on sidebar.
 - [ ] Make sure everything looks nice.
 
+## Bonus Features
+
+- [ ] Additional filters
+- [ ] More companies
+- [ ] Alternate data views
+- [ ] Better styling
+- [ ] Add more information to show when hover individual company logo
 
 
