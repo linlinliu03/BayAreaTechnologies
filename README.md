@@ -35,3 +35,11 @@ This project will be implemented with the following technologies:
 * D3 for overall structure and DOM manipulation and some styling
 * CSS for the remainder of the styling
 * Vanilla javascript for general logic
+
+## Implementation Timeline
+
+**Day 1:** Setup necessary node modules, get webpack up and running. Create webpack.config.js and package.json. Write a basic entry file and finish prep for D3. 
+Goals for the day:
+- [ ] Acquire csv files for company data
+- [ ] Get webpack serving files and frame out index.html
+- [ ] Understand d3 enough to actually be able to render some default graphs
