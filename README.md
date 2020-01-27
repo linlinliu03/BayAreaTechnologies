@@ -27,3 +27,11 @@ The app will consist of a main section showing the data visualization with compa
 Possible filters will include which location or company type to display. In the main section, users can mouse over a company logo to display additional information such as company name, type, location, technologies used, and introduction.
 
 ![proposalphoto](https://user-images.githubusercontent.com/53238880/73205075-17484980-40f5-11ea-956b-2ba4d392c11d.png)
+
+## Architecture and Technologies
+
+This project will be implemented with the following technologies:
+
+* D3 for overall structure and DOM manipulation and some styling
+* CSS for the remainder of the styling
+* Vanilla javascript for general logic
