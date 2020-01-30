@@ -1,20 +1,4 @@
 function logoSelection(location = "all", type = "all") {
-    // file = '../company-data/company-technologies.csv'
-
-    // d3.csv(file, function (data) {
-    //     data.forEach(d => {
-    //         d.Name = d.Name.toLowerCase();
-    //     })
-
-   
-
-    // let companyData;
-    // if (location === "all") {
-    //     companyData = data;
-    // } else {
-    //     companyData = data.filter(company => company["Location"].toLowerCase() === location)
-    //     radiusScale = d3.scaleSqrt().domain([5, 145]).range([20, 100]);
-    // }
 
     let data = [
         { "Number": 1, "Name": "Facebook", "Type": "Internet", "Location": "Menlo Park", "PNG": "http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19759.png", "Technologies":"PHP, React, GraphQL"},
@@ -111,14 +95,12 @@ function logoSelection(location = "all", type = "all") {
     const simulation = d3.forceSimulation()
         .force("x", d3.forceX().strength(.000))
         .force("y", d3.forceY().strength(.000))
-        // changed this
         .force("collide", d3.forceCollide(80))
     
     const companyBubbles = svgContainer.selectAll('.company-bubble')
         .data(companyData)
         .enter().append('circle')
         .attr("class", "company-bubble")
-        // changed this
         .attr("r", 80)
         .attr("fill", function (d) {
             return `url(#${d.Name})`;
@@ -156,7 +138,6 @@ function logoSelection(location = "all", type = "all") {
     
     d3.selectAll('.company-bubble').on('mouseover', function (d) {
         let company = d;
-        // let target = d3.event.target;
         let mouseNode = d3.select(this);
         
         mouseNode
@@ -175,7 +156,7 @@ function logoSelection(location = "all", type = "all") {
             .style("height", '250px')
             .style("width", "230px")
             .style("left", "48px")
-            .style("top", "300px");
+            .style("top", "350px");
         
         companySprite
             .style("height", '100px')
@@ -219,10 +200,221 @@ function logoSelection(location = "all", type = "all") {
 
     })
   
-
-
-
-    // })
 }
 
 logoSelection();
+
+const sample = [
+    {
+       webFramework: 'jQuery',
+        value: 48.7,
+        color: '#000000'
+    },
+    {
+       webFramework: 'React.js',
+        value: 31.3,
+        color: '#00a2ee'
+    },
+    {
+       webFramework: 'Angular.js',
+        value: 30.7,
+        color: '#fbcb39'
+    },
+    {
+       webFramework: 'ASP.NET',
+        value: 26.3,
+        color: '#007bc8'
+    },
+    {
+       webFramework: 'Express',
+        value: 19.7,
+        color: '#65cedb'
+    },
+    {
+       webFramework: 'Spring',
+        value: 16.2,
+        color: '#ff6e52'
+    },
+    {
+       webFramework: 'Vue.js',
+        value: 15.2,
+        color: '#f9de3f'
+    },
+    {
+       webFramework: 'Django',
+        value: 13.0,
+        color: '#5d2f8e'
+    },
+    {
+       webFramework: 'Flask',
+        value: 12.1,
+        color: '#008fc9'
+    },
+    {
+       webFramework: 'Laravel',
+        value: 10.5,
+        color: '#507dca'
+    },
+    // {
+    //    webFramework: 'Ruby on Rails',
+    //     value: 8.2,
+    //     color: '#507dca'
+    // },
+    // {
+    //    webFramework: 'Drupal',
+    //     value: 3.5,
+    //     color: '#507dca'
+    // }
+];
+
+
+// const svg = d3.select('svg');
+const svgContainer = d3.select('#container').append('svg');
+
+const margin = 80;
+const width = 1200 - 2 * margin;
+const height = 600 - 2 * margin;
+
+const chart = svgContainer.append('g')
+    .attr('transform', `translate(${margin}, ${margin})`);
+
+const xScale = d3.scaleBand()
+    .range([0, width])
+    .domain(sample.map((s) => s.webFramework))
+    .padding(0.4)
+
+const yScale = d3.scaleLinear()
+    .range([height, 0])
+    .domain([0, 50]);
+
+// vertical grid lines
+// const makeXLines = () => d3.axisBottom()
+//   .scale(xScale)
+
+const makeYLines = () => d3.axisLeft()
+    .scale(yScale)
+
+chart.append('g')
+    .attr('transform', `translate(0, ${height})`)
+    .call(d3.axisBottom(xScale));
+
+chart.append('g')
+    .call(d3.axisLeft(yScale));
+
+// vertical grid lines
+// chart.append('g')
+//   .attr('class', 'grid')
+//   .attr('transform', `translate(0, ${height})`)
+//   .call(makeXLines()
+//     .tickSize(-height, 0, 0)
+//     .tickFormat('')
+//   )
+
+chart.append('g')
+    .attr('class', 'grid')
+    .call(makeYLines()
+        .tickSize(-width, 0, 0)
+        .tickFormat('')
+    )
+
+const barGroups = chart.selectAll()
+    .data(sample)
+    .enter()
+    .append('g')
+
+barGroups
+    .append('rect')
+    .attr('class', 'bar')
+    .attr('x', (g) => xScale(g.webFramework))
+    .attr('y', (g) => yScale(g.value))
+    .attr('height', (g) => height - yScale(g.value))
+    .attr('width', xScale.bandwidth())
+    .on('mouseenter', function (actual, i) {
+        d3.selectAll('.value')
+            .attr('opacity', 0)
+
+        d3.select(this)
+            .transition()
+            .duration(300)
+            .attr('opacity', 0.6)
+            .attr('x', (a) => xScale(a.webFramework) - 5)
+            .attr('width', xScale.bandwidth() + 10)
+
+        const y = yScale(actual.value)
+
+        line = chart.append('line')
+            .attr('id', 'limit')
+            .attr('x1', 0)
+            .attr('y1', y)
+            .attr('x2', width)
+            .attr('y2', y)
+
+        barGroups.append('text')
+            .attr('class', 'divergence')
+            .attr('x', (a) => xScale(a.webFramework) + xScale.bandwidth() / 2)
+            .attr('y', (a) => yScale(a.value) + 30)
+            .attr('fill', 'white')
+            .attr('text-anchor', 'middle')
+            .text((a, idx) => {
+                const divergence = (a.value - actual.value).toFixed(1)
+
+                let text = ''
+                if (divergence > 0) text += '+'
+                text += `${divergence}%`
+
+                return idx !== i ? text : '';
+            })
+
+    })
+    .on('mouseleave', function () {
+        d3.selectAll('.value')
+            .attr('opacity', 1)
+
+        d3.select(this)
+            .transition()
+            .duration(300)
+            .attr('opacity', 1)
+            .attr('x', (a) => xScale(a.webFramework))
+            .attr('width', xScale.bandwidth())
+
+        chart.selectAll('#limit').remove()
+        chart.selectAll('.divergence').remove()
+    })
+
+barGroups
+    .append('text')
+    .attr('class', 'value')
+    .attr('x', (a) => xScale(a.webFramework) + xScale.bandwidth() / 2)
+    .attr('y', (a) => yScale(a.value) + 30)
+    .attr('text-anchor', 'middle')
+    .text((a) => `${a.value}%`)
+
+svgContainer
+    .append('text')
+    .attr('class', 'label')
+    .attr('x', -(height / 2) - margin)
+    .attr('y', margin / 2.4)
+    .attr('transform', 'rotate(-90)')
+    .attr('text-anchor', 'middle')
+    .text('Percentage (%)')
+
+svgContainer.append('text')
+    .attr('class', 'label')
+    .attr('x', width / 2 + margin)
+    .attr('y', height + margin * 1.7)
+    .attr('text-anchor', 'middle')
+    .text('Web Frameworks')
+
+svgContainer.append('text')
+    .attr('class', 'title')
+    .attr('x', width / 2 + margin)
+    .attr('y', 40)
+    .attr('text-anchor', 'middle')
+    .text('Top 10 Web Frameworks in 2019 ( try hovering on the chart )')
+
+svgContainer.append('text')
+    .attr('class', 'source')
+    .attr('x', width - margin / 2)
+    .attr('y', height + margin * 1.7)
+    .attr('text-anchor', 'start')
+    .text('Source: Stack Overflow, 2019')
