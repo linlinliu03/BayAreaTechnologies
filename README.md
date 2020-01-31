@@ -138,7 +138,3 @@ barGroups
             })
  ```
 
-
-
-
-![demo](8ZNJGb.mp4.gif)
