@@ -17,7 +17,7 @@ With BayAreaTechnologies, users will be able to:
   * View data on a particular tech company including company type, location, and main technologies used by hovering over a       specific company.
   * Check selectors that filter by location or company type specifying what data should be shown.
 
-* Bar Chart
+* Bar chart
   * View data on trending web frameworks statistics in 2019.
   * Hovering the bar chart to see different data rendered.
 
