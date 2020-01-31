@@ -35,6 +35,43 @@ This project will be implemented with the following technologies:
 
 Utilized D3 forcesimulation to populate company logos in a circular structure.
 
+```Javascript
+const simulation = d3.forceSimulation()
+        .force("x", d3.forceX().strength(.000))
+        .force("y", d3.forceY().strength(.000))
+        .force("collide", d3.forceCollide(80))
+    
+    const companyBubbles = svgContainer.selectAll('.company-bubble')
+        .data(companyData)
+        .enter().append('circle')
+        .attr("class", "company-bubble")
+        .attr("r", 80)
+        .attr("fill", function (d) {
+            return `url(#${d.Name})`;
+        });
+
+    let count = 20;
+    simulation.nodes(companyData)
+        .on('tick', function () {
+
+            if (count > 0) {
+                ticked()
+            }
+            // process = 1 - process;
+            count -= 1;
+        });
+
+    function ticked() {
+        companyBubbles
+            .attr("cx", function (d) {
+                return d.x
+            })
+            .attr("cy", function (d) {
+                return d.y
+            })
+    }
+ ```
+
 Implemented D3.js Grid System to improve graph readability by adding grid lines.
 
 
