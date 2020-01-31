@@ -12,15 +12,14 @@ Users will be able to check various selectors such as location or company type t
 
 With BayAreaTechnologies, users will be able to:
 
-* View data on technology statistics as they relate to top tech companies in the Bay Area.
-* View data on a particular tech company including company type, location, and main technologies used by hovering over a specific company.
-* Check selectors that filter by location or company type specifying what data should be shown.
-* View data on trending web frameworks statistics in 2019.
-* Hovering the bar chart to see different data rendered.
+* Company logos
+  * View data on technology statistics as they relate to top tech companies in the Bay Area.
+  * View data on a particular tech company including company type, location, and main technologies used by hovering over a       specific company.
+  * Check selectors that filter by location or company type specifying what data should be shown.
 
-In addition, the project will include:
-
-* A production README.
+* Bar Chart
+  * View data on trending web frameworks statistics in 2019.
+  * Hovering the bar chart to see different data rendered.
 
 ## Architecture and Technologies
 
