@@ -6,15 +6,17 @@ The San Francisco Bay Area is the home of many top tech companies, such as Googl
 
 With this project, my goal is to create a data visualization of various technologies used in the Bay Area top tech companies, including programming language, framework, and other information. So software engineers could use this website to prepare them for learning new tools following trending technologies.
 
-Users will be able to check various selectors such as location or company type to filter data they are interested in or to fulfill different purposes for themselves. They will be able to mouse over individual company logo and view the detailed information about that particular company. Additionally, there is a bar chart after
+Users will be able to check various selectors such as location or company type to filter data they are interested in or to fulfill different purposes for themselves. They will be able to mouse over individual company logo and view the detailed information about that particular company. Additionally, there is also a bar chart to show the top 10 web frameworks used in 2019.
 
 ## Functionality and MVP
 
 With BayAreaTechnologies, users will be able to:
 
 * View data on technology statistics as they relate to top tech companies in the Bay Area.
-* View individual data on a particular tech company including company name, type, location, technologies used, and introduction.
+* View data on a particular tech company including company type, location, and main technologies used by hovering over a specific company.
 * Check selectors that filter by location or company type specifying what data should be shown.
+* View data on trending web frameworks statistics in 2019.
+* Hovering the bar chart to see different data rendered.
 
 In addition, the project will include:
 
