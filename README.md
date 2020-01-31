@@ -31,5 +31,7 @@ This project will be implemented with the following technologies:
 * CSS for the remainder of the styling
 * Vanilla javascript for general logic
 
+## Highlights
+
 
 
