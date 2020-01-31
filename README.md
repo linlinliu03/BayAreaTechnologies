@@ -4,7 +4,7 @@ BayAreaTechnologies is a data visualization of technologies statistics, created 
 
 ## Background
 
-BayAreaTechnologies is a data visualization of technologies statistics, created with the D3.js library.The San Francisco Bay Area is the home of many top tech companies, such as Google, Facebook, and Apple. Each of those companies uses different technologies or even created their own internal tools.
+The San Francisco Bay Area is the home of many top tech companies, such as Google, Facebook, and Apple. Each of those companies uses different technologies or even created their own internal tools.
 
 With this project, my goal is to create a data visualization of various technologies used in the Bay Area top tech companies, including programming language, framework, and other information. So software engineers could use this website to prepare them for learning new tools following trending technologies.
 
