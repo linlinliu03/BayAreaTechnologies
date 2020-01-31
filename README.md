@@ -33,5 +33,11 @@ This project will be implemented with the following technologies:
 
 ## Highlights
 
+Utilized D3 forcesimulation to populate company logos in a circular structure.
+
+Implemented D3.js Grid System to improve graph readability by adding grid lines.
+
+
+
 
 
