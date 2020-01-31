@@ -136,8 +136,6 @@ barGroups
 
                 return idx !== i ? text : '';
             })
-
-    })
  ```
 
 
