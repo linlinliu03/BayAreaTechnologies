@@ -254,17 +254,7 @@ const sample = [
        webFramework: 'Laravel',
         value: 10.5,
         color: '#507dca'
-    },
-    // {
-    //    webFramework: 'Ruby on Rails',
-    //     value: 8.2,
-    //     color: '#507dca'
-    // },
-    // {
-    //    webFramework: 'Drupal',
-    //     value: 3.5,
-    //     color: '#507dca'
-    // }
+    }
 ];
 
 
