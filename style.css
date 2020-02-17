@@ -9,8 +9,8 @@ body{
     justify-content: space-between;
     height: 150px;
     position: fixed;
-    background-image: url(https://1r65612jvqxn8fcup46pve6b-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/clear-impact-state-government-background-header.jpg);
-    /* background-color:lightblue; */
+    /* background-image: url(https://1r65612jvqxn8fcup46pve6b-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/clear-impact-state-government-background-header.jpg); */
+    background-color:lightblue;
     width: 100%;
     z-index: 1;
 }

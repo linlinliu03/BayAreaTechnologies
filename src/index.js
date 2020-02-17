@@ -13,12 +13,12 @@ function logoSelection(location = "all", type = "all") {
         { "Number": 10, "Name": "Oracle", "Type": "IT Services", "Location": "Redwood City", "PNG": "https://cdn.freebiesupply.com/logos/large/2x/oracle-1-logo-png-transparent.png", "Technologies":"jQuery, Veu.js, Slick"},
         { "Number": 11, "Name": "Cisco", "Type": "Software", "Location": "San Jose", "PNG": "https://assets.cloud.im/prod/ux1/images/logos/cisco/cisco-2x.png", "Technologies":"jQuery, Javascript, nginx"},
         { "Number": 12, "Name": "Linkedin", "Type": "Internet", "Location": "Sunnyvale", "PNG": "https://cdn2.iconfinder.com/data/icons/popular-social-media-flat/48/Popular_Social_Media-22-512.png", "Technologies":"jQuery, nginx, Bootstrap"},
-        { "Number": 13, "Name": "Slack", "Type": "Software", "Location": "San Francisco", "PNG": "https://www.b2bnn.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-2.29.34-PM.png", "Technologies": "jQuery, PHP, Javascript" },
+        { "Number": 13, "Name": "Slack", "Type": "Software", "Location": "San Francisco", "PNG": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/1280px-Slack_Technologies_Logo.svg.png", "Technologies": "jQuery, PHP, Javascript" },
         { "Number": 14, "Name": "Adobe", "Type": "Software", "Location": "San Jose", "PNG": "https://i.ya-webdesign.com/images/adobe-logo-png-1.png", "Technologies": "Javascript, Apache Cordova" },
         { "Number": 15, "Name": "Salesforce", "Type": "Internet", "Location": "San Francisco", "PNG": "http://pluspng.com/img-png/salesforce-logo-vector-png-salesforce-logo-png-2300.png", "Technologies": "Cloudant, ClearDB" },
-        { "Number": 16, "Name": "HuaWei", "Type": "Electronics", "Location": "Mountain View", "PNG": "https://www.freepnglogos.com/uploads/huawei-logo-png/huawei-logo-communication-13.png", "Technologies": "jQuery, Google Fonts" },
-        { "Number": 17, "Name": "Pinterest", "Type": "Internet", "Location": "San Francisco", "PNG": "https://pngimg.com/uploads/pinterest/pinterest_PNG63.png", "Technologies": "nginx, Python, React" },
-        { "Number": 18, "Name": "Eventbrite", "Type": "Internet", "Location": "San Francisco", "PNG": "https://s3-eu-west-1.amazonaws.com/www.jobfluent.com/company_logos/2/7/7/2775_3333_1667_original.png", "Technologies":"nginx, React, Django"},
+        { "Number": 16, "Name": "Pinterest", "Type": "Internet", "Location": "San Francisco", "PNG": "https://pngimg.com/uploads/pinterest/pinterest_PNG63.png", "Technologies": "nginx, Python, React" },
+        { "Number": 17, "Name": "HuaWei", "Type": "Electronics", "Location": "Mountain View", "PNG": "https://www.freepnglogos.com/uploads/huawei-logo-png/huawei-logo-communication-13.png", "Technologies": "jQuery, Google Fonts" },
+        { "Number": 18, "Name": "Eventbrite", "Type": "Internet", "Location": "San Francisco", "PNG": "https://www.stickpng.com/assets/images/5841c48ba6515b1e0ad75aa4.png", "Technologies":"nginx, React, Django"},
         { "Number": 19, "Name": "Youtube", "Type": "Internet", "Location": "San Bruno", "PNG": "https://pngimg.com/uploads/youtube/youtube_PNG5.png", "Technologies":"Google Fonts, Google Compute Engine"},
         { "Number": 20, "Name": "Apple", "Type": "Electronics", "Location": "Cupertino", "PNG": "http://pngimg.com/uploads/apple_logo/apple_logo_PNG19666.png", "Technologies": "Swift, Objective-C, Cocoa Touch(iOS)" },
     ]
@@ -56,10 +56,10 @@ function logoSelection(location = "all", type = "all") {
     let companyInfo = graphSelection
         .append("div")
         .attr("class", "company-info")
-        .style("height", '60px')
-        .style("width", "260px")
+        .style("height", '250px')
+        .style("width", "230px")
         .style("left", "48px")
-        .style("top", "120px");
+        .style("top", "350px");
     
     let companySprite = companyInfo.append("img")
         .attr("class", "company-sprite");
@@ -86,7 +86,7 @@ function logoSelection(location = "all", type = "all") {
         .append("svg:image")
         .attr("height", 1)
         .attr("width", 1)
-        .attr("preserveAspectRatio", "none")
+        //.attr("preserveAspectRatio", "none")
         .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
         .attr("xlink:href", function (d) {
             return `${d.PNG}`;
@@ -101,7 +101,7 @@ function logoSelection(location = "all", type = "all") {
         .data(companyData)
         .enter().append('circle')
         .attr("class", "company-bubble")
-        .attr("r", 80)
+        .attr("r", 60)
         .attr("fill", function (d) {
             return `url(#${d.Name})`;
         });
@@ -161,6 +161,7 @@ function logoSelection(location = "all", type = "all") {
         companySprite
             .style("height", '100px')
             .style("width", '100px')
+            .style("object-fit", "contain")
             .attr('src', () => {
                 return `${company.PNG}`;
             });
@@ -180,16 +181,16 @@ function logoSelection(location = "all", type = "all") {
         let mouseNode = d3.select(this);
 
         mouseNode
-            .attr("r", 80)
+            .attr("r", 60)
             .attr("fill", function (d) {
                 return `url(#${company.Name})`;
             });
 
         companyInfo
-            .style("height", '60px')
-            .style("width", "260px")
+            .style("height", '250px')
+            .style("width", "230px")
             .style("left", "48px")
-            .style("top", "120px");
+            .style("top", "350px");
 
         companySprite
             .style("height", '0px')
