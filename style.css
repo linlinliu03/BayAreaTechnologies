@@ -2,6 +2,10 @@ body{
     margin: 0;
 }
 
+.all{
+  background-color:#daedf4 
+}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -10,7 +14,9 @@ body{
     height: 150px;
     position: fixed;
     /* background-image: url(https://1r65612jvqxn8fcup46pve6b-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/clear-impact-state-government-background-header.jpg); */
-    background-color:lightblue;
+    /* background-color:#9fd1e2; */
+    background-color:#daedf4;
+    border-bottom: 1px solid #010101; 
     width: 100%;
     z-index: 1;
 }
@@ -41,14 +47,6 @@ body{
 .main{
     display: flex;
     flex-direction: row;
-    /* border-radius: 5px; */
-    background-color: white;
-    margin: 50px;
-    padding: 24px;
-    /* background-image: url(https://knowledge.wharton.upenn.edu/wp-content/uploads/2016/07/welcome-to-silicon-valley.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 300px, 300px; */
     position: relative;
 }
 
@@ -70,8 +68,8 @@ body{
 
 .dropbtn {
   /* background-color: lightseagreen; */
-  color: white;
-  font-family: 'Source Sans Pro',sans-serif;
+  color:black;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
   /* padding: 16px; */
   font-size: 24px;
   border: none;
@@ -116,7 +114,13 @@ body{
 } */
 
 
-
+/* .text{
+  text-align: center;
+  padding-top: 30px;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 30px;
+  color: #2F4A6D;
+} */
 
 div#layout {
   text-align: center;
@@ -195,3 +199,4 @@ text.source {
   justify-content: space-between;
   width: 100px;
 }
+
