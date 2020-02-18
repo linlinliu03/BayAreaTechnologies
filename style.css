@@ -14,9 +14,7 @@ body{
     height: 150px;
     position: fixed;
     /* background-image: url(https://1r65612jvqxn8fcup46pve6b-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/clear-impact-state-government-background-header.jpg); */
-    /* background-color:#9fd1e2; */
-    background-color:#daedf4;
-    border-bottom: 1px solid #010101; 
+    background-color:#9fd1e2;
     width: 100%;
     z-index: 1;
 }
