@@ -37,7 +37,7 @@ This project will be implemented with the following technologies:
 
 Utilized D3 forcesimulation to populate company logos in a circular structure.
 
-![vFUyZP](https://user-images.githubusercontent.com/53238880/73582079-88af3180-4440-11ea-8d2d-dabcfd5e8c15.gif)
+![N3FMEt](https://user-images.githubusercontent.com/53238880/74699105-a6a4c200-51b4-11ea-9f99-4db33226d01c.gif)
 
 ```Javascript
 const simulation = d3.forceSimulation()
