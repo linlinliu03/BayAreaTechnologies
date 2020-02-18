@@ -1,6 +1,6 @@
 # BayAreaTechnologies
 
-[Live site](https://linlinliu03.github.io/SiliconValleyTech/)
+[Live site](https://linlinliu03.github.io/BayAreaTechnologies/)
 
 BayAreaTechnologies is a data visualization of technologies statistics, created with the D3.js library.
 
