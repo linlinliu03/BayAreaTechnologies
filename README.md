@@ -78,7 +78,7 @@ const simulation = d3.forceSimulation()
 
 Implemented D3.js Grid System to improve graph readability by adding grid lines.
 
-![eAxOvK](https://user-images.githubusercontent.com/53238880/73582210-0a06c400-4441-11ea-996e-ca3923ac4b0d.gif)
+![nHzqxV](https://user-images.githubusercontent.com/53238880/74699345-4bbf9a80-51b5-11ea-85d2-eb4c14320d81.gif)
 
 ```javascript
 chart.append('g')
