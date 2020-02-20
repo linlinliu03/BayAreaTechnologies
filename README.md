@@ -37,7 +37,7 @@ This project will be implemented with the following technologies:
 
 Utilized D3 forcesimulation to populate company logos in a circular structure.
 
-![N3FMEt](https://user-images.githubusercontent.com/53238880/74699105-a6a4c200-51b4-11ea-9f99-4db33226d01c.gif)
+![xAObNU](https://user-images.githubusercontent.com/53238880/74904577-ef00e300-5360-11ea-9fdc-4742982a08cc.gif)
 
 ```Javascript
 const simulation = d3.forceSimulation()
@@ -78,7 +78,7 @@ const simulation = d3.forceSimulation()
 
 Implemented D3.js Grid System to improve graph readability by adding grid lines.
 
-![nHzqxV](https://user-images.githubusercontent.com/53238880/74699345-4bbf9a80-51b5-11ea-85d2-eb4c14320d81.gif)
+![CUdIfP](https://user-images.githubusercontent.com/53238880/74904653-24a5cc00-5361-11ea-9ed4-116fcee1e3e2.gif)
 
 ```javascript
 chart.append('g')
